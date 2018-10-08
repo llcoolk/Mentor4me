@@ -1,0 +1,88 @@
+.carousel-item.img {
+  position: absolute;
+  overflow: hidden;
+}
+
+.caption-1 {
+  font-size: 40px;
+  font-weight: 700;
+  bottom: 20px;
+  position: absolute;
+  text-align: center;
+  left: 25%;
+  right: 25%;
+  z-index: 10;
+  color: #194f5f;
+  margin-bottom: 23%;
+}
+
+.caption-2 {
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #000;
+  left: 10%;
+  right: 35%;
+  bottom: 20px;
+  z-index: 10;
+  margin-bottom: 33%;
+}
+
+.caption-3 {
+  font-size: 40px;
+  font-weight: 700;
+  bottom: 20px;
+  position: absolute;
+  text-align: center;
+  color: #95380e;
+  left: 40%;
+  right: 10%;
+  bottom: 20px;
+  z-index: 10;
+  margin-bottom: 16%;
+}
+
+.caption-4 {
+  font-size: 40px;
+  font-weight: 700;
+  bottom: 20px;
+  position: absolute;
+  text-align: center;
+  left: 15%;
+  right: 15%;
+  color: #fff;
+  bottom: 20px;
+  z-index: 10;
+  margin-bottom: 25%;
+}
+
+.caption-5 {
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #d9469d;
+  left: 7%;
+  right: 55%;
+  bottom: 20px;
+  z-index: 10;
+  margin-bottom: 33%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .w-100 {
+    margin-top: 3rem;
+  }
+
+  .carousel-caption-1 .caption-1,
+  .carousel-caption-2 .caption-2,
+  .carousel-caption-3 .caption-3,
+  .carousel-caption-4 .caption-4,
+  .carousel-caption-5 .caption-5 {
+    font-size: 13px;
+  }
+}

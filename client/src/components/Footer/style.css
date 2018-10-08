@@ -1,0 +1,21 @@
+footer {
+    background-image: linear-gradient(to bottom right, #81bed9, #00abd5);
+    margin-top: .5rem;
+}
+
+.social-media a {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #fff;
+    color: #00b4d7;
+    float: left;
+    margin-left: 5px;
+}
+
+.copyright {
+    color: #fff;
+    float: right;
+}
