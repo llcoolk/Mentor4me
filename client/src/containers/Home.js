@@ -15,8 +15,10 @@ class Home extends Component {
             <div className="home-text">
               <h1 className="title">FIND A MENTOR-4-ME</h1>
               <h2 className="subtitle">
-                We are so glad that you are here! The first step for you is to
-                look for a mentor.
+                {/* We are so glad that you are here! The first step for you is to
+                look for a mentor. */}
+                Find your mentor and get the help you need to become a
+                successful programmer!
               </h2>
               <Link className="btn btn-lg btn-info home" to="/mentors">
                 Find a mentor
@@ -62,12 +64,19 @@ class Home extends Component {
                     >
                       <i className="fa fa-envelope-o" />
                     </a>
-                    <a href="https://github.com/llcoolk" className="card-link">
+                    <a
+                      href="https://github.com/llcoolk"
+                      className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i className="fa fa-github" />
                     </a>
                     <a
-                      href="www.linkedin.com/in/leen-kim"
+                      href="https://www.linkedin.com/in/leen-kim"
                       className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i className="fa fa-linkedin" />
                     </a>
@@ -105,12 +114,16 @@ class Home extends Component {
                     <a
                       href="https://github.com/codered613"
                       className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i className="fa fa-github" />
                     </a>
                     <a
-                      href="www.linkedin.com/in/cody-jacobs"
+                      href="https://www.linkedin.com/in/cody-jacobs"
                       className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i className="fa fa-linkedin" />
                     </a>
@@ -142,12 +155,19 @@ class Home extends Component {
                     <a href="mailto:daxisda1@gmail.com" className="card-link">
                       <i className="fa fa-envelope-o" />
                     </a>
-                    <a href="https://github.com/daxisda1" className="card-link">
+                    <a
+                      href="https://github.com/daxisda1"
+                      className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i className="fa fa-github" />
                     </a>
                     <a
                       href="https://www.linkedin.com/in/dane-shambrook-656ba790/"
                       className="card-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i className="fa fa-linkedin" />
                     </a>

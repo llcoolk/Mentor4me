@@ -34,7 +34,7 @@ class Header extends Component {
   };
 
   render() {
-    const { brand } = this.props;
+    // const { brand } = this.props;
 
     return (
       <nav
