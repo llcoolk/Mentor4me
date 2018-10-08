@@ -99,7 +99,6 @@ class Dashboard extends Component {
       <div
         className="container text-center"
         style={{
-          minHeight: 900,
           marginTop: 58,
           backgroundColor: "rgb(230, 230, 230, .8)"
         }}
