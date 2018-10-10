@@ -41,16 +41,19 @@ class Login extends Component {
   validate = data => {
     const errors = {};
 
-    if (!data.email) errors.email = "Enter email";
     if (!validator.isEmail(data.email)) errors.email = "Enter a valid email";
     if (!data.password) errors.password = "Enter password";
 
     return errors;
   };
 
+  refreshPage = () => {
+    window.location.reload();
+  };
+
   componentWillMount = () => {
     if (localStorage.getItem("JWT")) {
-      this.props.history.push("/");
+      this.props.history.push("/").then(this.refreshPage);
     }
   };
 

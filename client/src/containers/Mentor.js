@@ -8,6 +8,7 @@ import "./mentor.css";
 
 class Mentor extends Component {
   state = {
+    userId: "",
     role: "student",
     mentor: {},
     Profile: {},
@@ -18,8 +19,8 @@ class Mentor extends Component {
     if (!localStorage.getItem("JWT")) {
       this.props.history.push("/login");
     } else {
-      const { role } = decode(localStorage.getItem("JWT"));
-      this.setState({ role });
+      const { role, userId } = decode(localStorage.getItem("JWT"));
+      this.setState({ role, userId });
     }
   };
 
@@ -31,9 +32,11 @@ class Mentor extends Component {
   };
 
   render() {
-    const { mentor, role } = this.state;
+    const { mentor, role, userId } = this.state;
     // const { role } = decode(localStorage.getItem("JWT"));
     console.log("role", role);
+    console.log("mentorId", mentor.mentorId);
+    console.log("userId", userId);
     return (
       <div className="container">
         <div className="row">
@@ -48,7 +51,6 @@ class Mentor extends Component {
               summary={mentor.summary}
               bio={mentor.bio}
             />
-            {/* <div className="col-md-12"> */}
             {role !== "mentor" && (
               <Link
                 to={`/mentor/${this.props.match.params.id}/appt`}
@@ -57,14 +59,19 @@ class Mentor extends Component {
                 Book Appointment
               </Link>
             )}
-            {role !== "mentor" && (
+            {mentor.mentorId !== userId && (
               <Link to="/mentors" className="btn btn-outline-info mt-2 mr-3">
                 Back
               </Link>
             )}
-            {role !== "student" && (
+            {mentor.mentorId === userId && (
               <Link to="/profile" className="btn btn-outline-info mt-2 mr-3">
-                Back
+                Profile
+              </Link>
+            )}
+            {mentor.mentorId === userId && (
+              <Link to="/mentors" className="btn btn-outline-info mt-2 mr-3">
+                Mentors
               </Link>
             )}
             {role !== "student" && (
@@ -75,7 +82,6 @@ class Mentor extends Component {
           </div>
         </div>
       </div>
-      // </div>
     );
   }
 }

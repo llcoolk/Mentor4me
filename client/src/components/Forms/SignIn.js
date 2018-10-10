@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const SignIn = props => (
   <form>
-    {!!props.errors.global && (
+    {/* {!!props.errors.global && (
       <div className="alert alert-danger">{props.errors.global}</div>
-    )}
+    )} */}
     <div className="form-group">
       <h2 className="text-center mt-4">Login To Your Account</h2>
       <p className="text-center">
@@ -24,10 +24,8 @@ const SignIn = props => (
         onChange={props.onChange}
         value={props.email}
       />
-      {props.errors.email ? (
+      {props.errors.email && (
         <small className="text-danger">{props.errors.email}</small>
-      ) : (
-        ""
       )}
     </div>
     <div>
@@ -40,10 +38,8 @@ const SignIn = props => (
         onChange={props.onChange}
         value={props.password}
       />
-      {props.errors.password ? (
+      {props.errors.password && (
         <small className="text-danger">{props.errors.password}</small>
-      ) : (
-        ""
       )}
     </div>
     <button onClick={props.onSubmit} className="btn btn-info mt-3">

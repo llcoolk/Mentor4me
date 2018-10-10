@@ -23,13 +23,13 @@ const List = ({ userId, first, last, imgUrl, summary, bio }) => (
           >{`${first} ${last}`}</h1>
           <h3
             className="list-summary"
-            style={{ fontWeight: 400, paddingBottom: 15, marginBottom: 10 }}
+            style={{ fontWeight: 400, paddingBottom: 10 }}
           >
             {summary}
           </h3>
           <h5 className="list-bio overflow-ellipsis">{bio}</h5>
           <span className="pull-right">
-            <Link to={`/mentor/${userId}`} className="btn btn-info ml-3 mt-4">
+            <Link to={`/mentor/${userId}`} className="btn btn-info ml-3 mt-3">
               View Profile
             </Link>
           </span>

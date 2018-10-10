@@ -8,7 +8,6 @@ const Footer = () => (
         <div className="col-6 social-media">
           <a
             href="mailto:mentor4me@gmail.com"
-            target="_blank"
             rel="noopener noreferrer"
           >
             <i className="fa fa-envelope" />

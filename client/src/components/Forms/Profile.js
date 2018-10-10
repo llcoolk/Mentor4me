@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Profile = props => {
   return (
     <form>
-      <div className="form-group mt-4">
-        <h4 className="text-center mb-3">Edit your profile settings</h4>
+      <div className="form-group mt-5">
+        <h4 className="text-center mt-3 mb-3">Edit your profile settings</h4>
       </div>
       <div className="container">
         <div className="row">

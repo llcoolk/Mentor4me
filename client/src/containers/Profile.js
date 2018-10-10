@@ -75,9 +75,13 @@ class Profile extends Component {
     return errors;
   };
 
+  refreshPage = () => {
+    window.location.reload();
+  };
+
   componentWillMount = () => {
     if (!localStorage.getItem("JWT")) {
-      this.props.history.push("/login");
+      this.props.history.push("/login").then(this.props.refreshPage);
     }
   };
 

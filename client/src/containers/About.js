@@ -18,8 +18,8 @@ class About extends Component {
             />
             <div className="carousel-caption-1 py-20">
               <h1 className="caption-1">
-                Find your mentor and get the help you need to become a
-                successful programmer...
+                It's a new week and there's always room to build a project that
+                never existed before...
                 <br /> Find a Mentor4me!
               </h1>
             </div>
