@@ -5,7 +5,7 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/8-27-a/final-project"
+    "url": "https://github.com/llcoolk/Mentor4me"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
