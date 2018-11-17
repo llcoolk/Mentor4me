@@ -4,7 +4,6 @@ import decode from "jwt-decode";
 import Axios from "axios";
 import Card from "../components/Card";
 import { API_URL } from "../backend_api";
-import "./mentor.css";
 
 class Mentor extends Component {
   state = {
@@ -54,31 +53,46 @@ class Mentor extends Component {
             {role !== "mentor" && (
               <Link
                 to={`/mentor/${this.props.match.params.id}/appt`}
-                className="btn btn-info mt-2 mr-3"
+                className="btn btn-info profile pull-right mt-2 ml-3"
               >
                 Book Appointment
               </Link>
             )}
             {mentor.mentorId !== userId && (
-              <Link to="/mentors" className="btn btn-outline-info mt-2 mr-3">
+              <Link
+                to="/mentors"
+                // className="btn btn-outline-info profile mt-2 mr-3"
+                className="btn btn-outline-info profile pull-right mt-2 ml-3"
+              >
                 Back
               </Link>
             )}
             {mentor.mentorId === userId && (
-              <Link to="/profile" className="btn btn-outline-info mt-2 mr-3">
-                Profile
+              <Link
+                to="/profile"
+                className="btn btn-outline-info profile pull-right mt-2 ml-3"
+              >
+                Back
               </Link>
             )}
-            {mentor.mentorId === userId && (
+            {/* {mentor.mentorId === userId && (
               <Link to="/mentors" className="btn btn-outline-info mt-2 mr-3">
                 Mentors
               </Link>
-            )}
-            {role !== "student" && (
-              <Link to="/dashboard" className="btn btn-info mr-3 mt-2">
+            )} */}
+            {mentor.mentorId === userId && (
+              <Link
+                to="/dashboard"
+                className="btn btn-info profile pull-right ml-3 mt-2"
+              >
                 Dashboard
               </Link>
             )}
+            {/* {role !== "student" && (
+              <Link to="/dashboard" className="btn btn-info mr-3 mt-2">
+                Dashboard
+              </Link>
+            )} */}
           </div>
         </div>
       </div>

@@ -2,6 +2,10 @@ body {
   padding: 0;
 }
 
+.bg-light.devteam {
+  background-color: #f2f2f2 !important;
+}
+
 .home-image {
   background-image: url("/images/bg-nature.jpeg");
   height: 59rem;
@@ -90,7 +94,7 @@ body {
   margin: 5px;
 }
 
-.card-link a {
+.card-link.fa a {
   margin-top: 5px;
   margin-bottom: 5px;
   height: 30px;
@@ -162,9 +166,16 @@ body {
 /* Social Media Links */
 
 .fa:hover {
-  color: #6c757d;
+  color: #07b5ff;
 }
 
+.fa-envelope {
+  color: #00819f;
+}
+
+.fa-envelope:hover {
+  color: #07b5ff;
+}
 
 @media screen and (max-width: 1366px) {
   .home-image .title {
@@ -179,7 +190,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .home-image .title {
-    margin-top: 6rem;
+    margin-top: 7rem;
   }
 
   .home-image .paragraph {

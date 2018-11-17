@@ -7,4 +7,5 @@ export { default as Mentors } from "./Mentors";
 export { default as Mentor } from "./Mentor";
 export { default as Student } from "./Student";
 export { default as Dashboard } from "./Dashboard";
+export { default as Demo } from "./Demo";
 export { default as Login } from "./Login";

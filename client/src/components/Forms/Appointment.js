@@ -3,7 +3,9 @@ import React from "react";
 const Appointment = ({ onChange, onSubmit, data, errors }) => (
   <form>
     <div className="form-group">
-      <h2 className="text-center">Create an Appointment</h2>
+      <h2 className="text-center" style={{ color: "#16a1b9" }}>
+        Create an Appointment
+      </h2>
     </div>
     <div className="form-group">
       <label htmlFor="date">Date</label>
@@ -39,8 +41,8 @@ const Appointment = ({ onChange, onSubmit, data, errors }) => (
         onChange={onChange}
       />
     </div>
-    <button type="submit" className="btn btn-info mt-5" onClick={onSubmit}>
-      Submit Appointment
+    <button type="submit" className="btn btn-info" onClick={onSubmit}>
+      Submit
     </button>
   </form>
 );

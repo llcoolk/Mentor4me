@@ -2,3 +2,7 @@
 .my-5 {
   margin-top: 6rem !important;
 }
+
+h2.capitalize {
+  text-transform: capitalize;
+}

@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const SignUp = props => (
   <form>
     <div className="form-group">
-      <h2 className="text-center mt-4 mb-3">Sign up in seconds</h2>
+      <h2 className="text-center mb-3" style={{ color: "#16a1b9" }}>
+        Sign Up in Seconds
+      </h2>
       <p className="text-center">
         <strong>Already a member?</strong>
         <Link to="/login/"> Sign in here</Link>

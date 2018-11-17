@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 const Profile = props => {
   return (
     <form>
-      <div className="form-group mt-5">
-        <h4 className="text-center mt-3 mb-3">Edit your profile settings</h4>
+      <div className="form-group">
+        <h2 className="text-center" style={{ color: "#16a1b9" }}>
+          Edit Your Profile Settings
+        </h2>
       </div>
       <div className="container">
         <div className="row">
-          <div className="form-group col-md-6 p-0">
+          <div className="form-group col-md-6 p-1">
             <label htmlFor="first">First Name</label>
             <input
               type="text"
@@ -20,7 +22,7 @@ const Profile = props => {
               onChange={props.onChange}
             />
           </div>
-          <div className="form-group col-md-6 p-0">
+          <div className="form-group col-md-6 p-1">
             <label htmlFor="last">Last Name</label>
             <input
               type="text"
@@ -36,10 +38,11 @@ const Profile = props => {
       <div className="form-group">
         <label htmlFor="imgUrl">Profile Image</label>
         <input
-          type="text"
+          type="url"
           id="imgUrl"
           name="imgUrl"
           className="form-control"
+          placeholder="ex) https://blog.com/mypic.jpg"
           value={props.imgUrl}
           onChange={props.onChange}
         />
@@ -95,6 +98,7 @@ const Profile = props => {
           id="summary"
           name="summary"
           className="form-control"
+          placeholder="my skillsets..."
           value={props.summary}
           onChange={props.onChange}
           required
@@ -106,6 +110,8 @@ const Profile = props => {
           id="bio"
           name="bio"
           className="form-control"
+          placeholder="my bio..."
+          maxLetters={500}
           value={props.bio}
           onChange={props.onChange}
           required
@@ -113,13 +119,13 @@ const Profile = props => {
       </div>
       <div className="form-group">
         <button className="btn btn-info" type="submit" onClick={props.onSubmit}>
-          Save Changes
+          Save
         </button>
         <Link
           to={`/${props.role}/${props.userId}`}
           className="btn btn-outline-info ml-3"
         >
-          Profile preview
+          Preview
         </Link>
         {!!props.success && (
           <div className="alert alert-success mt-2">{props.success}</div>

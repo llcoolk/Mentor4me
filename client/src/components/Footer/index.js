@@ -6,10 +6,7 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col-6 social-media">
-          <a
-            href="mailto:mentor4me@gmail.com"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:mentor4me@gmail.com" rel="noopener noreferrer">
             <i className="fa fa-envelope" />
           </a>
           <a
@@ -35,7 +32,7 @@ const Footer = () => (
           </a>
         </div>
         <div className="copyright col-6">
-          <p className="mb-0">&copy; 2018 Mentor4Me</p>
+          <p className="mb-0">&copy; Copyright 2018 Mentor4me</p>
         </div>
       </div>
     </div>

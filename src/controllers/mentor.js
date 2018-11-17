@@ -30,8 +30,8 @@ const getAll = (req, res) => {
   const where = {
     role: "mentor",
     [Op.or]: [
-      { first: { [Op.like]: `%${query ? query : ""}%` } },
-      { last: { [Op.like]: `%${query ? query : ""}%` } }
+      { first: { [Op.like]: `${query ? query : ""}%` } },
+      { last: { [Op.like]: `${query ? query : ""}%` } }
     ]
   };
 

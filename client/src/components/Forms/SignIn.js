@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 const SignIn = props => (
   <form>
-    {/* {!!props.errors.global && (
+    {!!props.errors.global && (
       <div className="alert alert-danger">{props.errors.global}</div>
-    )} */}
+    )}
     <div className="form-group">
-      <h2 className="text-center mt-4">Login To Your Account</h2>
+      <h2 className="text-center" style={{ color: "#16a1b9" }}>
+        Login To Your Account
+      </h2>
       <p className="text-center">
         <strong>Not a member yet?</strong>
         <Link to="/register"> Sign up for free!</Link>

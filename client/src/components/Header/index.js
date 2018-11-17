@@ -42,11 +42,17 @@ class Header extends Component {
           window.location.pathname !== "/" ? "bg-dark" : "bg-transparent"
         }`}
       >
-        <NavLink className="navbar-brand text-center mr-5" to="/">
+        <NavLink className="navbar-brand text-center ml-3" to="/">
           {/* {brand} */}
-          Mentor
+          <img
+            height="35"
+            className="rounded-circle mr-2"
+            src="/images/logo1.png"
+            alt=""
+          />
+          <span className="logotext">Mentor</span>
           <span>4</span>
-          me
+          <span className="logotext">me</span>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -60,22 +66,29 @@ class Header extends Component {
         <div className="collapse navbar-collapse" id="navbarsExample07">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink exact className="nav-link" to="/">
+              <NavLink exact className="nav-link ml-2" to="/">
                 Home <span className="sr-only">(current)</span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/mentors">
+              <NavLink className="nav-link ml-2" to="/mentors">
                 Find a mentor
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item ml-2">
               <NavLink className="nav-link" to="/about">
-                About Us
+                About
               </NavLink>
             </li>
             {localStorage.getItem("JWT") ? (
               <React.Fragment>
+                <li className="nav-item ">
+                  <NavLink className="nav-link ml-2" to="/demo">
+                    Demo
+                  </NavLink>
+                </li>
+                {/* {localStorage.getItem("JWT") ? ( */}
+                {/* <React.Fragment> */}
                 <li className="nav-item dropdown">
                   <Link
                     className="nav-link dropdown-toggle"
@@ -86,8 +99,8 @@ class Header extends Component {
                     aria-expanded="false"
                   >
                     <img
-                      height="30"
-                      className="rounded-circle"
+                      height="35"
+                      className="rounded-circle ml-2"
                       src={
                         this.state.avatarUrl
                           ? this.state.avatarUrl
@@ -107,7 +120,7 @@ class Header extends Component {
                     <div className="dropdown-divider" />
                     <NavLink
                       to="/"
-                      className="btn btn-outline-info ml-3"
+                      className="btn btn-outline-info ml-4"
                       onClick={() => this.logOut()}
                     >
                       Log Out
@@ -118,12 +131,15 @@ class Header extends Component {
             ) : (
               <React.Fragment>
                 <li className="nav-item">
-                  <NavLink to="/login" className="btn btn-outline-light mr-3">
+                  <NavLink
+                    to="/login"
+                    className="btn btn-outline-light mt-1 ml-2"
+                  >
                     Login
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/register" className="btn btn-info mr-3">
+                  <NavLink to="/register" className="btn btn-info mt-1 ml-2">
                     Sign Up
                   </NavLink>
                 </li>

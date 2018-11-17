@@ -6,6 +6,7 @@ import {
   About,
   Appointment,
   Dashboard,
+  Demo,
   Home,
   Login,
   Mentors,
@@ -24,6 +25,7 @@ class App extends Component {
           <Header brand="Mentor4me" />
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/demo" component={Demo} />
           <Route exact path="/mentors" component={Mentors} />
           <Route exact path="/mentor/:id" component={Mentor} />
           <Route exact path="/mentor/:id/appt" component={Appointment} />

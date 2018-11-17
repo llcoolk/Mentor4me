@@ -89,6 +89,7 @@ class Dashboard extends Component {
             return mentorName[0];
           }
         });
+
         //console.log("mentor", this.state.mentors[mentor].firstName);
       }
     }
@@ -98,6 +99,7 @@ class Dashboard extends Component {
       <div
         className="container text-center"
         style={{
+          padding: 5,
           // minHeight: 900,
           marginTop: 58,
           backgroundColor: "rgb(230, 230, 230, .8)"
@@ -111,7 +113,9 @@ class Dashboard extends Component {
         <table className="table w-100 d-block d-md-table">
           <thead className="thead-dark">
             <tr>
-              <th className="d-none d-md-table-cell" scope="col" />
+              <th className="d-none d-md-table-cell" scope="col">
+                #
+              </th>
               <th scope="col">Date</th>
               <th
                 className={`${this.state.role === "mentor" &&
@@ -161,7 +165,7 @@ class Dashboard extends Component {
                       {this.state.role === "mentor" ? (
                         <Link
                           to={`/student/${appt.studentId}`}
-                          className="btn btn-link"
+                          className="btn btn-link username"
                         >
                           {`${appt.User.first} ${appt.User.last}`}
                         </Link>
@@ -191,7 +195,7 @@ class Dashboard extends Component {
                           <div className="modal-content">
                             <div className="modal-header">
                               <h5
-                                className="modal-title"
+                                className="modal-title username"
                                 id="exampleModalLabel"
                               >
                                 {appt.User.first} {appt.User.last}
@@ -221,19 +225,19 @@ class Dashboard extends Component {
                             </div>
                             <div className="modal-footer">
                               <button
-                                type="button"
-                                className="btn btn-secondary"
-                                data-dismiss="modal"
-                              >
-                                Close
-                              </button>
-                              <button
                                 onClick={() =>
                                   this.handleReply(appt.apptId, appt.comment)
                                 }
                                 className="btn btn-info"
                               >
-                                Reply
+                                <span className="fa fa-send" />
+                              </button>
+                              <button
+                                type="button"
+                                className="btn btn-outline-info"
+                                data-dismiss="modal"
+                              >
+                                <span className="fa fa-times" />
                               </button>
                             </div>
                           </div>
@@ -244,7 +248,7 @@ class Dashboard extends Component {
                     {this.state.role === "mentor" && (
                       <td>
                         <button
-                          className="btn btn-outline-info mr-2"
+                          className="btn btn-outline-info ml-1"
                           onClick={() =>
                             this.handleStatus(appt.apptId, "accepted")
                           }
@@ -252,7 +256,7 @@ class Dashboard extends Component {
                           <i className="far fa-check-circle" />
                         </button>
                         <button
-                          className="btn btn-danger"
+                          className="btn btn-danger ml-1"
                           onClick={() =>
                             this.handleStatus(appt.apptId, "rejected")
                           }

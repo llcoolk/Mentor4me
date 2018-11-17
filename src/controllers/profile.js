@@ -47,13 +47,13 @@ const update = (req, res) => {
   const updateProfile = {};
 
   if (summary) {
-    updateSummary.summary = summary;
+    updateProfile.summary = summary;
   }
   if (bio) {
-    updateUser.bio = bio;
+    updateProfile.bio = bio;
   }
   if (userId) {
-    updateUser.userId = userId;
+    updateProfile.userId = userId;
   }
 
   Profile.update(updateProfile, {

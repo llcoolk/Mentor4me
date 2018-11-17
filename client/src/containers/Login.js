@@ -15,6 +15,10 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  refreshPage = () => {
+    document.location.reload(true);
+  };
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -27,33 +31,29 @@ class Login extends Component {
         if (user.data.success) {
           localStorage.setItem("JWT", user.data.token);
           this.props.history.push("/");
+          this.refreshPage();
         } else {
           console.log("err", user.data.message);
           this.setState({
             errors: { ...this.state.errors, global: user.data.message }
           });
         }
-        // console.log(res.data);
+        // console.log("user.data", user.data);
       });
     }
   };
 
   validate = data => {
     const errors = {};
-
+    // console.log("password", data.password);
     if (!validator.isEmail(data.email)) errors.email = "Enter a valid email";
     if (!data.password) errors.password = "Enter password";
-
     return errors;
-  };
-
-  refreshPage = () => {
-    window.location.reload();
   };
 
   componentWillMount = () => {
     if (localStorage.getItem("JWT")) {
-      this.props.history.push("/").then(this.refreshPage);
+      this.props.history.push("/");
     }
   };
 
@@ -63,13 +63,15 @@ class Login extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6 mx-auto">
-              <SignIn
-                onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
-                errors={this.state.errors}
-                email={this.state.email}
-                password={this.state.password}
-              />
+              <div className="bg-dark rounded p-5 m-5 text-white">
+                <SignIn
+                  email={this.state.email}
+                  password={this.state.password}
+                  errors={this.state.errors}
+                  onChange={this.handleChange}
+                  onSubmit={this.handleSubmit}
+                />
+              </div>
             </div>
           </div>
         </div>

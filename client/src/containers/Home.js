@@ -13,7 +13,11 @@ class Home extends Component {
         <section className="homepage mt-15">
           <div className="home-image">
             <div className="home-text">
-              <h1 className="title">FIND A MENTOR-4-ME</h1>
+              <h1 className="title">
+                FIND A Mentor
+                <span style={{ color: "#f7ce46" }}>4</span>
+                me
+              </h1>
               <h2 className="subtitle">
                 {/* We are so glad that you are here! The first step for you is to
                 look for a mentor. */}
@@ -33,9 +37,14 @@ class Home extends Component {
           </div>
         </section>
         {/* ======= Dev Team Intro ===== */}
-        <section className="about-us text-center" style={{ marginTop: 50 }}>
-          <h2>Project Team Members</h2>
+        <section className="about-us text-center mt-4">
           <div className="container">
+            <h2
+              className="bg-light devteam text-left m-0 p-1 ml-2 mr-2"
+              // style={{ backgroundColor: "none" }}
+            >
+              Dev Team Members
+            </h2>
             <div className="row">
               <div className="col-md-4">
                 <div className="card-home home">
@@ -47,39 +56,52 @@ class Home extends Component {
                   <div className="card-body home m-3">
                     <h2 className="card-title-home m-2">Leen Kim</h2>
                     <p className="card-text-home">
-                      I was born in South Korea and have been living in Orange
-                      County, CA since I was 13. I put my career in IT on pause
-                      to raise my 3 sons. I have my educational background in
-                      Mechanical Engineering and have worked for a major auto
-                      importer as a Business Systems Analyst for 10 years and
-                      now looking to pick up where I left off. Learning to be a
-                      Full Stack Web developer turned out to be better than I
-                      have ever expected! I'm passionate about Jesus, golf, and
-                      cooking, and now I'm also passionate about coding!
+                      <br /> ✝️ 🏌🏻‍♀️ ⛳️ 👩🏻‍🍳 💻 <br />I was born in S. Korea and
+                      have been living in OC, CA since I was 14. I have my
+                      educational background in Mechanical Engineering from USC
+                      and have worked in the automotive industry for 10+ yrs
+                      mainly as a business systems analyst and worked with all
+                      phases of system develop-ment lifecycle. I put my career
+                      on pause to raise our 3 sons who are now in their twenties
+                      and am looking to pick up where I left off with an upgrade
+                      in programming languages and new technologies. I'm glad I
+                      chose FullStack web development because I can now create
+                      and deploy an entire solution, frontend and backend! I'm
+                      passionate about Jesus, golf, cooking, and now I'm also
+                      passionate about coding!
                     </p>
-                    {/* <div className="social-media text-center mb-3"> */}
-                    <a
-                      href="mailto:leenkim@alumni.usc.edu"
-                      className="card-link"
-                    >
-                      <i className="fa fa-envelope-o" />
-                    </a>
-                    <a
-                      href="https://github.com/llcoolk"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-github" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/leen-kim"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-linkedin" />
-                    </a>
+                    <div className="social-media text-">
+                      <a
+                        href="mailto:leenkim@alumni.usc.edu"
+                        className="card-link"
+                      >
+                        <i className="fa fa-envelope" />
+                      </a>
+                      <a
+                        href="https://github.com/llcoolk"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-github" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/leen-kim"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-linkedin" />
+                      </a>
+                      <a
+                        href="http://leen-kim.com"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-link" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -94,39 +116,48 @@ class Home extends Component {
                   <div className="card-body home m-3">
                     <h2 className="card-title-home m-2">Cody Jacobs</h2>
                     <p className="card-text-home">
-                      I grew up and currently reside in Akwesasne, NY. Before
-                      getting into coding I was mostly involved in Music
-                      Production-Audio Engineering. After taking a break from
-                      Music Production, I wanted to pursue something else that
-                      still involved computers and technology. I signed up to
-                      attend the Bethel Tech school to become a web developer
-                      soon after. I love the versatility that come with coding.
+                      <br /> 🏒 🥅 🎼 🎶 🎧
+                      <br />
+                      My name is Cody Jacobs and I grew up and currently reside
+                      in Akwesasne, NY. Before getting into coding I was mostly
+                      involved in Music Production-Audio Engineering. After
+                      taking a break from Music Production, I wanted to pursue
+                      something that still involved computers and technology. I
+                      was at Bethel Redding for a year and learned about their
+                      School of Technology and signed up to become a web
+                      developer. I love the versatility that come with coding.
                       You have to be able to adapt to challenges quickly and
                       efficiently and coding really gives you an incredible
-                      platform to display creativity.
+                      platform to display creativity. Besides coding, I'm an
+                      ice-hockey player and currenty playing in the Akwesasne
+                      league.
+                      <br />
+                      <br />
                     </p>
-                    <a
-                      href="mailto:codyjacobs191@gmail.com"
-                      className="card-link"
-                    >
-                      <i className="fa fa-envelope-o" />
-                    </a>
-                    <a
-                      href="https://github.com/codered613"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-github" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/cody-jacobs"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-linkedin" />
-                    </a>
+                    <div className="social-media text-center">
+                      <a
+                        href="mailto:codyjacobs191@gmail.com"
+                        className="card-link"
+                      >
+                        <i className="fa fa-envelope" />
+                      </a>
+                      <a
+                        href="https://github.com/codered613"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-github" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/cody-jacobs"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-linkedin" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -141,36 +172,45 @@ class Home extends Component {
                   <div className="card-body home m-3">
                     <h2 className="card-title-home m-2">Dane Shambrook</h2>
                     <p className="card-text-home">
-                      I was born and raised in Orange County, CA. I have been
-                      working in the service industry since I was 17. I have
-                      traveled extensively and was living with my wife in Uganda
-                      when I came back to the USA to start a career that would
-                      allow me to travel and still maintain a sense of freedom
-                      and stability. I love coding because it allows you to
-                      bring an idea into something tangible and no limits to
-                      what can be done. There are many problems this world faces
-                      that are waiting for us to use tech to find the solution
-                      to.
+                      <br />
+                      💑 🗺 ✈️ 🚌 ⛪️
+                      <br />I was born and raised in Orange County, CA. I have
+                      been working in the service industry for the past 10 years
+                      since I was 17. I have traveled extensively and was living
+                      with my wife in Uganda when I came back to the USA to
+                      start a career that would allow me to travel and still
+                      maintain a sense of freedom and stability. I love coding
+                      because it allows you to bring an idea into something
+                      tangible and there are no limits to what can be done.
+                      There are many problems that are waiting for us to use
+                      technology to find the solution to in this world and
+                      that's why I love learning how to code. Currently, my wife
+                      and I serve in the youth ministry at the church which my
+                      father pastors.
+                      <br />
+                      <br />
                     </p>
-                    <a href="mailto:daxisda1@gmail.com" className="card-link">
-                      <i className="fa fa-envelope-o" />
-                    </a>
-                    <a
-                      href="https://github.com/daxisda1"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-github" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/dane-shambrook-656ba790/"
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa fa-linkedin" />
-                    </a>
+                    <div className="social-media text-center">
+                      <a href="mailto:daxisda1@gmail.com" className="card-link">
+                        <i className="fa fa-envelope" />
+                      </a>
+                      <a
+                        href="https://github.com/daxisda1"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-github" />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/dane-shambrook-656ba790/"
+                        className="card-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-linkedin" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
