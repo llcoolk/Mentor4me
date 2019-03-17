@@ -32,7 +32,7 @@ const Footer = () => (
           </a>
         </div>
         <div className="copyright col-6">
-          <p className="mb-0">&copy; Copyright 2018 Mentor4me</p>
+          <p className="mb-0">&copy; Copyright 2018-2019 Mentor4me</p>
         </div>
       </div>
     </div>
