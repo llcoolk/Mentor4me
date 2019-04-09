@@ -37,7 +37,7 @@ class Home extends Component {
           </div>
         </section>
         {/* ======= Dev Team Intro ===== */}
-        <section className="about-us text-center mt-4">
+        {/* <section className="about-us text-center mt-4">
           <div className="container">
             <h2
               className="bg-light devteam text-left m-0 p-1 ml-2 mr-2"
@@ -216,7 +216,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </React.Fragment>
     );
   }
